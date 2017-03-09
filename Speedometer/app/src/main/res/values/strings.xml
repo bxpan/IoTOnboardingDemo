@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Speedometer</string>
+    <string name="SetSpeedButtonText">SetSpeed</string>
+    <string name="get_button">Refresh</string>
+    <string name="request_default_text">Nothing...</string>
+    <string name="enableLableText">Enable/Disable</string>
+    <string name="enabled">Enabled</string>
+    <string name="SpeedUpButtonText">Speed Up</string>
+    <string name="SpeedDownButtonText">Speed Down</string>
+    <string name="UnknownSpeedText">\?\?</string>
+</resources>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_speedometer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.amazon.aws.speedometer.SpeedometerActivity">
+
+
+    <Button
+        android:id="@+id/speedUp"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="increaseSpeed"
+        android:text="@string/SpeedUpButtonText"
+        android:layout_below="@+id/awesomeSpeedometer"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="36dp"
+        android:layout_toStartOf="@+id/enableButton"
+        android:layout_alignRight="@+id/speedDown"
+        android:layout_alignEnd="@+id/speedDown" />
+
+    <Button
+        android:id="@+id/setSpeed"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="setSpeed"
+        android:text="@string/SetSpeedButtonText"
+        android:layout_alignBaseline="@+id/speedDown"
+        android:layout_alignBottom="@+id/speedDown"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <com.github.anastr.speedviewlib.AwesomeSpeedometer
+        android:id="@+id/awesomeSpeedometer"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/channel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp" />
+
+    <Button
+        android:id="@+id/speedDown"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="decreaseSpeed"
+        android:text="@string/SpeedDownButtonText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/enableButton" />
+
+    <ToggleButton
+        android:id="@+id/enableButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="turnOnOffCruise"
+        android:text="@string/enabled"
+        android:textOff="Cruise-OFF"
+        android:textOn="Cruise-ON"
+        android:layout_alignBaseline="@+id/speedUp"
+        android:layout_alignBottom="@+id/speedUp"
+        android:layout_alignLeft="@+id/setSpeed"
+        android:layout_alignStart="@+id/setSpeed" />
+
+    <EditText
+        android:id="@+id/speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/UnknownSpeedText"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_below="@+id/enableButton"
+        android:layout_toLeftOf="@+id/setSpeed"
+        android:layout_marginRight="42dp"
+        android:layout_marginEnd="42dp" />
+
+
+</RelativeLayout>
